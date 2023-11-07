@@ -1,0 +1,44 @@
+{% extends 'managerdash.html' %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% block head %}
+    <title>Edit Player</title>
+    {% endblock %}
+</head>
+<body>
+    {% block main %}
+
+    <div class="row">
+        <div class="col-2"></div>
+        <div class="col-8 mt-3"><h1>Edit Player</h1></div>
+        <div class="col-2"></div>
+      </div>
+      <div class="row">
+        <div class="col-3"></div>
+        <div class="col-6 text-center mt-5">
+            <form action="" method="post" class="form text-center p-4 bg-dark mt-5" enctype="multipart/form-data">
+                
+                {% csrf_token %}
+                <table class="table table-borderless table-dark">
+                    <tr>
+                        <td><label for="nphone">Phone</label></td>
+                        <td><input type="text" name="nphone" placeholder="Enter new phone number" value="{{data.player_phno}}" class="form-control"></td>
+                    </tr>
+                   
+                        <td colspan="1" ><input type="submit" value="Update" class="btn btn-success text-center form-control" ></td>
+                    </tr>
+
+                </table>
+
+            </form>
+
+        </div>
+        <div class="col-3"></div>
+      </div>
+    {% endblock %}
+</body>
+</html>

@@ -1,0 +1,33 @@
+{% extends "main_nav.html" %}
+{% load static %}
+ {% block head %}
+ <title>About</title>
+ <style>
+    h2,h1,h4{
+        color: bisque;
+        font-family: 'Times New Roman';
+    }
+
+ </style>
+ {% endblock %}
+{% block main1 %}
+<body style="background-image: url({% static 'images/bg.jpg'%});background-size:cover">
+{% endblock %}
+{% block main %}
+<div class="row mt-5" >
+    <div class="col-2"></div>
+    <div class="col-8 p-5" style="background-color: rgba(94, 123, 202, 0.445);">
+        <h1 class="text-center">ABHI'S CRICZ</h1>
+        <h4 class="text-center"> TOURNAMENTS </h4>
+        <h2>Overview</h2>
+        <p class="text-white">Welcome to our open cricket tournament website! We are passionate about cricket and are dedicated to providing a platform for cricket enthusiasts to come together, showcase their skills, and enjoy the game.</p>
+        
+        <h2>Our Mission</h2>
+        <p class="text-white">Our mission is to promote the spirit of sportsmanship, teamwork, and healthy competition through the game of cricket. We aim to create a welcoming and inclusive environment for players of all levels and backgrounds.</p>
+
+        <h2>Contact Us</h2>
+        <p class="text-white">If you have any questions or would like to get in touch with us, please feel free to email us at <a href="mailto:contact@abhicricztournamentwebsite.com">contact@abhicricztournamentwebsite.com</a>.</p>
+    </div>
+    <div class="col-2"></div>
+</div>
+{% endblock %}

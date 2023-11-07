@@ -1,0 +1,75 @@
+{% extends "main_nav.html" %}
+{% load static %}
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    {% block support %}
+    {% endblock %}
+    {% block head %}
+   
+    <meta charset="UTF-8">
+    <title>Tournament Guide</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        h1 {
+            font-size: 36px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .guide-content {
+            margin: 20px;
+        }
+    </style>
+    {% endblock %}
+    
+</head>
+<body>
+    {% block main %}
+    <header>
+        <h1>Tournament Guide</h1>
+    </header>
+    <div class="container">
+        <div class="guide-content">
+            <h2>Welcome to Our Cricket Tournament Website</h2>
+            <p>
+                We're delighted to have you visit our website. Whether you're a cricket fan or a participant, here's a quick guide on how to use our website effectively.
+            </p>
+            
+            <h2>Navigation</h2>
+            <p>
+                Use the navigation bar at the top of the page to explore different sections of the website, including Home, Fixtures, Teams, Tournaments, and more.
+            </p>
+            
+            <h2>Viewing Fixtures</h2>
+            <p>
+                To check the upcoming fixtures, navigate to the "Fixtures" section. You'll find information on match dates, venues, and participating teams.
+            </p>
+            
+            <h2>Checking Results</h2>
+            <p>
+                To view the latest match results, visit the "Results" section. Here, you can find scores, match highlights, and more.
+            </p>
+        </div>
+    </div>
+    {% endblock %}
+</body>
+</html>

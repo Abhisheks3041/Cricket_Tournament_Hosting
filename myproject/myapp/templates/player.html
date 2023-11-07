@@ -1,0 +1,70 @@
+{% extends "main_nav.html" %}
+{% load static %}
+{% block head %}
+<title>Tournament Manager</title>
+<style>
+    <!-- td{
+        padding:5px;
+    } -->
+    form{
+        background-color:rgb(0,0,0,0);
+
+    }
+    table{
+        height:40%;
+
+    }
+</style>
+
+{% endblock %}
+{% block main %}
+<div class="row">
+    <div class="col-4"></div>
+    <div class="col-4">
+        <form action=""method="post">
+            {% csrf_token %}
+            <table>
+                <tr>
+                    <td><label for="T_id">Team ID </label></td>
+                    <td><input type="text" name="T_id" placeholder="Enter player id"></td>
+                </tr>
+                <tr>
+                    <td><label for="P_name">Player Name</label></td>
+                    <td><input type="text" name="P_name" placeholder="Enter player name"></td>
+                </tr>
+                <tr>
+                    <td><label for="P_ph_no">player phonenumber</label></td>
+                    <td><input type="text" name="P_ph_no" placeholder="Enter player phn number"></td>
+                </tr>
+                <tr>
+                    <td><label for="P_email">player email</label></td>
+                    <td><input type="text" name="P_email" placeholder="Enter player phn number"></td>
+                </tr>
+                
+                </tr>
+                <tr>
+                    <td><label for="p_address">player Address</label></td>
+                    <td><input type="text" name="P_address" placeholder="Enter Player address"></td>
+                </tr>
+            
+                <tr>
+                    <td><label for="P_age">player age</label></td>
+                    <td><input type="text" name="P_age" placeholder="Enter player age"></td>
+                </tr>
+                    
+                <tr><a href="" class="btn-btn-light">Register</a></tr>
+                
+    
+    
+    
+    
+    
+            </table>
+    
+    
+    
+        </form>
+        
+    </div>
+    <div class="col-4"></div>
+</div>

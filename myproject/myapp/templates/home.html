@@ -1,0 +1,90 @@
+{% extends "main_nav.html" %}
+{% load static %}
+{% block head %}
+<title>HOME</title>
+
+<style>
+    .d{
+        list-style-type: none;
+    }
+    .d::before {
+        content: "✓";
+      }
+    .img1{
+        height: 65px;
+    }
+    .hi{
+        background-color: aliceblue;
+    }
+</style>
+
+
+{% endblock %}
+{% block main %}
+{% load static %}
+<div class="row">
+<div class="col-5">
+    <img src="{% static 'images/hi.gif' %}" alt="" style="width:100%;">
+</div>
+<div class="col-7">   <h1>Plan your next</h1>
+    <h1>tournament</h1>
+    <h1>with Abhis Cricz Tournaments</h1>
+    <li class="d">Quick and easy match scheduler</li>
+    <li class="d">Online registration page</li>
+    <!-- <div class="d-grid gap-2 col-6 mx-auto"> -->
+       <a href="/cat"> <button class="btn btn-primary mt-5" type="button">Create a Tournament</button></a> 
+    <!-- <div> -->
+
+
+
+
+</div>
+<div class="row ">
+    <div class="col p-5"> <img src="../static/images/Logo_purple_blog.jpg" alt="" class="img1"></div>
+    <div class="col p-5"><img src="../static/images/bat-logo-vector.jpg" alt="" class="img1"></div>
+    <div class="col p-5"><img src="../static/images/big_bash_league.jpg" alt="" class="img1"></div>
+    <div class="col p-5"><img src="../static/images/mc-business-logo.jpg" alt="" class="img1"></div>
+    <div class="col p-5"><img src="../static/images/mrf.jpg" alt="" class="img1"></div>
+    <div class="col p-5"><img src="../static/images/ipl.jpg" alt="" class="img1"></div>
+</div> 
+<div class="col p-5"><img src="../static/images/brand.jpg" alt="" class="img1"></div>    
+<div class="col p-5"><img src="../static/images/mcdonalds-restaurant.jpg" alt="" class="img1"></div>    
+<div class="col p-5"><img src="../static/images/travels.jpg" alt="" class="img1"></div>
+<div class="col p-5"><img src="../static/images/ele.jpg" alt="" class="img1"></div>
+<div class="col p-5"><img src="../static/images/dl logo.jpg" alt="" class="img1"></div>
+<div class="col p-5"><img src="../static/images/duo-1x.jpg" alt="" class="img1"></div>
+
+</div>
+<div class="text-center"><h1>PRICING</h1></div>
+
+<div class="row text-center" >
+    <div class="col-4">
+        <i>Amateur</i>
+        <h1>Free</h1>
+        <i>forever</i>
+        <li class="d">Up to 8 teams</li>
+        <li class="d">Flexible format</li>
+        <li class="d">Planning tool</li>
+        
+
+        </div>
+    <div class="col-4">
+        <i>Worldclass</i>
+        <h1>$40</h1>
+        <i>per tournament</i>
+        <li class="d">Up to 60 teams</li>
+        <li class="d">Custom branding</li>
+        <li class="d">List sponsors</li>
+        
+        
+    </div>
+    <div class="col-4">
+        <i>Legendary</i>
+        <h1>$120</h1>
+        <i>per tournament</i>
+        <li class="d">Up to 60 teams</li>
+        <li class="d">Custom branding</li>
+        <li class="d">List sponsors</li>
+    </div>
+</div>
+{% endblock %}

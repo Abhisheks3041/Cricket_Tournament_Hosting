@@ -1,0 +1,113 @@
+{% extends "main_nav.html" %}
+{% load static %}
+{% block head %}
+<title>Creating tournament</title>
+
+<style>
+    
+        .form-group {
+            margin-bottom: 20px;
+        }
+        .form-group label {
+            font-weight: bold;
+        }
+        .form-group input[type="text"],
+        .form-group select {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .form-group input[type="date"] {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .form-group input[type="submit"] {
+            background-color: #e75602;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+        }
+        .form-group input[type="submit"]:hover {
+            background-color: #ff7d39;
+        }
+        h2 {
+            margin: 0;
+        }
+
+</style>
+
+
+{% endblock %}
+
+{% block main %}
+<div class="row">
+    <div class="col-3"></div>
+    <div class="col-3"><form>
+        <div class="form-group mt-4">
+            <label for="title"><strong>Tournament Title</strong></label>
+            <input type="text" id="tour" name="tour" placeholder="Enter tournament name" class="form-control">
+        </div>
+        <div class="form-group mt-4">
+           
+           
+            <label for="tournamentType"><strong>Tournament Type:</strong></label>
+            <select id="tournamentType" name="tournamentType">
+                <option value="">Select an option</option>
+                <option value="amateur">Amateur</option>
+                <option value="worldclass">World Class</option>
+                <option value="legendary">Legendary</option>
+            </select>
+           
+    
+    
+
+    
+        <div class="form-group mt-4">
+            <label for="dateInput"><strong>Select a Date:</strong></label>
+            <input type="date" id="dateInput" name="dateInput" value="2023-10-28">
+            <input type="submit" class="text-white" value="Submit" style="color: rgb(231, 86, 2); margin-top: 10px;">
+        </div>
+        <div class="form-group mt-4">
+        <h2>Select a Payment Option</h2>
+        
+            <label>
+                <input type="radio" name="payment" value="credit_card">
+                Credit Card
+            </label>
+            <br>
+            <label>
+                <input type="radio" name="payment" value="paypal">
+                PayPal
+            </label>
+            <br>
+            <label>
+                <input type="radio" name="payment" value="bank_transfer">
+                Bank Transfer
+            </label>
+            <br>
+            <label>
+                <input type="radio" name="payment" value="other">
+                Other
+            </label>
+            <br>
+    
+            <h3>Payment Details:</h3>
+            <!-- Additional fields for payment details based on the selected option -->
+    
+            <input type="submit" value="Submit Payment">
+        </div>
+    
+    </form></div>
+    <div class="col-3">
+        
+    </div>
+    <div class="col-3"></div>
+</div>
+
+
+
+{% endblock %}

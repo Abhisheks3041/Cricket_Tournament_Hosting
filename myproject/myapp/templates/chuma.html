@@ -1,0 +1,46 @@
+<div class="row">
+    <div class="col-3"></div>
+    <div class="col-6">
+    <tr>
+        <label for="title"><strong>Tournament Title</strong></label>
+        <input type="text" id ="tour" name="tour" placeholder="Enter tournament name" class="form-control">
+    </tr>
+
+    <tr>
+        <form>
+            <label for="dateInput"><strong>Select a Date:</strong> </label>
+            <input type="date" id="dateInput" name="dateInput" value="2023-10-28">
+            <input type="submit" value="Submit" style="color: rgb(231, 86, 2); ">
+        </form>
+    </tr>
+    <tr>
+        <label for="mid"><strong>Manager id</strong></label>
+        <input type="text" id ="mid" name="mid" placeholder="Enter manager id" class="form-control">
+    </tr>
+    <tr>
+        <label for="mid"><strong>Manager Password</strong></label>
+        <input type="text" id ="mpass" name="mpass" placeholder="Enter manager password" class="form-control">
+    </tr>
+    <a href="/back"  class="btn btn-primary"> Back</a>
+    <a href="/next"  class="btn btn-primary">Next</a>
+    </div>
+    <div class="col-3"></div>
+</div>
+{% comment %} cat chum {% endcomment %}
+
+<div class="d-flex mt-3">
+    <a href="/back" class="btn btn-primary back ml-auto">Back</a>
+    <a href="/next" class="btn btn-primary next mr-2  next">Next</a> 
+</div>
+<form>
+    <div class="form-group">
+        <label for="title"><strong>Tournament Title</strong></label>
+        <input type="text" id="tour" name="tour" placeholder="Enter tournament name" class="form-control">
+    </div>
+
+    <div class="form-group">
+        <label for="dateInput"><strong>Select a Date:</strong></label>
+        <input type="date" id="dateInput" name="dateInput" value="2023-10-28">
+        <input type="submit" value="Submit" style="color: rgb(231, 86, 2); margin-top: 10px;">
+    </div>
+</form>

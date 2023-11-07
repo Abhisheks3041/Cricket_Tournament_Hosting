@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% block head %}
+    <title>Manager Home</title>
+    {% endblock %}
+    <style>
+      .hh{
+        margin-left: 900px;
+        background-color: rgb(74, 237, 49);
+        color: aliceblue;
+      }
+    </style>
+</head>
+<body>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="/mdash">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-person-bounding-box" viewBox="0 0 16 16">
+                <path d="M1.5 1a.5.5 0 0 0-.5.5v3a.5.5 0 0 1-1 0v-3A1.5 1.5 0 0 1 1.5 0h3a.5.5 0 0 1 0 1h-3zM11 .5a.5.5 0 0 1 .5-.5h3A1.5 1.5 0 0 1 16 1.5v3a.5.5 0 0 1-1 0v-3a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 1-.5-.5zM.5 11a.5.5 0 0 1 .5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 1 0 1h-3A1.5 1.5 0 0 1 0 14.5v-3a.5.5 0 0 1 .5-.5zm15 0a.5.5 0 0 1 .5.5v3a1.5 1.5 0 0 1-1.5 1.5h-3a.5.5 0 0 1 0-1h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 1 .5-.5z"/>
+                <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm8-9a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+              </svg>
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+              <a class="nav-link active" aria-current="page" href="/matm">Add Team Member</a>
+              <a class="nav-link" href="/viewtour">View Available Tournament</a>
+              <a class="nav-link" href="/plyrs">View Team Members</a>
+              <a class="nav-link" href="/medit">Edit Profile</a>
+              <a class="nav-link hh text-dark" href="/logout">Logout</a>
+
+            </div>
+          </div>
+        </div>
+      </nav>
+      {% block main %}
+      <div class="row">
+        <div class="col-2"></div>
+        <div class="col-8 mt-3"><h1>Add Team Here</h1></div>
+        <div class="col-2"></div>
+      </div>
+      <div class="row">
+        <div class="col-3"></div>
+        <div class="col-6 text-center mt-5">
+            <form action="" method="post" class="form text-center p-4 bg-dark mt-5" enctype="multipart/form-data">
+                
+                {% csrf_token %}
+                <table class="table table-borderless table-dark">
+                    <tr>
+                        <td><label for="tname">Team Name</label></td>
+                        <td><input type="text" name="tname" placeholder="Enter Team Name" class="form-control"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="tlogo">Team Logo</label></td>
+                        <td><input type="file" name="tlogo" class="form-control"></td>
+                    </tr>
+
+
+                    <tr>
+                        <td colspan="2" ><input type="submit" value="Register Team" class="btn btn-success text-center form-control" ></td>
+                    </tr>
+
+                </table>a
+
+            </form>
+
+        </div>
+        <div class="col-3"></div>
+      </div>
+      {% endblock %}
+</body>
+</html>
